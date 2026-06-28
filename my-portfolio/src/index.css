@@ -1,0 +1,67 @@
+:root {
+  --font-heading: 'Unbounded', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Colors */
+  --bg-primary: #090314;
+  --bg-secondary: #120824;
+  --card-bg: rgba(22, 11, 44, 0.45);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-border-hover: rgba(0, 240, 255, 0.45);
+
+  --color-text-primary: #f5f2f9;
+  --color-text-secondary: #b3accb;
+
+  /* Accents */
+  --color-accent-violet: #bd00ff;
+  --color-accent-magenta: #ff007f;
+  --color-accent-cyan: #00f0ff;
+  
+  --color-accent-violet-rgb: 189, 0, 255;
+  --color-accent-magenta-rgb: 255, 0, 127;
+  --color-accent-cyan-rgb: 0, 240, 255;
+
+  /* Glows */
+  --glow-cyan: 0 0 25px rgba(0, 240, 255, 0.35);
+  --glow-magenta: 0 0 25px rgba(255, 0, 127, 0.35);
+  --glow-violet: 0 0 25px rgba(189, 0, 255, 0.35);
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(189, 0, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.45);
+}
