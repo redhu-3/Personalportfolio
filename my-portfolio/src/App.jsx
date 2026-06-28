@@ -7,7 +7,6 @@ import CertificateSection from "./component/CertificateSection"; // ✅ Added im
 import ProjectSection from "./component/ProjectsSection";
 import ContactSection from "./component/ContactSection";
 import BackgroundMesh from "./component/BackgroundMesh";
-import CustomCursor from "./component/CustomCursor";
 import Marquee from "./component/Marquee";
 
 import "./App.css";
@@ -16,7 +15,6 @@ const App = () => {
   return (
     <div>
       <BackgroundMesh />
-      <CustomCursor />
       <Navbar />
 
       {/* ✅ Home Section */}

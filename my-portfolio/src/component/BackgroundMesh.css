@@ -26,7 +26,6 @@
   background: radial-gradient(circle, var(--color-accent-violet) 0%, rgba(189, 0, 255, 0) 70%);
   top: -15%;
   left: -10%;
-  animation: floatPurple 25s ease-in-out infinite alternate;
 }
 
 .blob-2 {
@@ -35,7 +34,6 @@
   background: radial-gradient(circle, var(--color-accent-magenta) 0%, rgba(255, 0, 127, 0) 70%);
   bottom: -15%;
   right: -5%;
-  animation: floatMagenta 20s ease-in-out infinite alternate;
 }
 
 .blob-3 {
@@ -44,7 +42,6 @@
   background: radial-gradient(circle, var(--color-accent-cyan) 0%, rgba(0, 240, 255, 0) 70%);
   top: 35%;
   left: 45%;
-  animation: floatCyan 22s ease-in-out infinite alternate;
 }
 
 .mesh-overlay {

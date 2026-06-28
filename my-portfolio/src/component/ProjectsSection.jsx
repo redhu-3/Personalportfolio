@@ -35,7 +35,7 @@ const ProjectSection = () => {
       date: "Apr 2025 – May 2025",
       description:
         "An intelligent dashboard helping students schedule study sessions, set goals, track task progress, and optimize daily study routines using visual calendar analytics.",
-      tech: "React.js | Node.js | Express.js | Firebase",
+      tech: "Java | JDBC | MySQL",
       link: "https://github.com/redhu-3/SmartStudyPlanner",
     },
     {

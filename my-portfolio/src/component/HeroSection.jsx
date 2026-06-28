@@ -72,6 +72,9 @@ const HeroSection = () => {
 
   return (
     <div className="b2">
+      {/* Dynamic Glowing Core */}
+      <div className="hero-glow-core"></div>
+
       <motion.div 
         className="per_info"
         variants={containerVariants}
@@ -83,7 +86,7 @@ const HeroSection = () => {
           variants={nameContainerVariants}
         >
           <motion.span
-            style={{ display: "block" }}
+            className="intro-span"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -94,6 +97,7 @@ const HeroSection = () => {
             <motion.span
               key={index}
               variants={charVariants}
+              whileHover={{ y: -12, color: "var(--color-accent-cyan)", scale: 1.15 }}
               style={{ display: "inline-block", whiteSpace: char === " " ? "pre" : "normal" }}
             >
               {char}
@@ -154,6 +158,22 @@ const HeroSection = () => {
           >
             <FaEnvelope size={28} />
           </motion.a>
+        </motion.div>
+      </motion.div>
+
+      {/* Animated Scroll Down Indicator */}
+      <motion.div 
+        className="scroll-indicator-container"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 0.8 }}
+      >
+        <motion.div 
+          className="scroll-indicator"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
+        >
+          <div className="mouse-wheel"></div>
         </motion.div>
       </motion.div>
     </div>
