@@ -7,6 +7,7 @@ import nptelCert from "../assets/nptel.png";
 import "./CertificateSection.css";
 import TiltCard from "./TiltCard";
 import ScrollReveal from "./ScrollReveal";
+import { FaExternalLinkAlt, FaCertificate } from "react-icons/fa";
 
 Modal.setAppElement("#root");
 
@@ -35,6 +36,12 @@ const certificates = [
     type: "image",
     src: nptelCert,
   },
+  {
+    id: 5,
+    title: "Web Designing Workshop",
+    type: "link",
+    link: "https://drive.google.com/file/d/1uoBFHE1N-Xq8-e4K7OIvOQkM3e1s6VMC/view?usp=sharing",
+  },
 ];
 
 const CertificateSection = () => {
@@ -42,6 +49,10 @@ const CertificateSection = () => {
   const [currentCert, setCurrentCert] = useState(null);
 
   const openModal = (cert) => {
+    if (cert.type === "link") {
+      window.open(cert.link, "_blank", "noopener,noreferrer");
+      return;
+    }
     setCurrentCert(cert);
     setModalIsOpen(true);
   };
@@ -65,7 +76,16 @@ const CertificateSection = () => {
                 className="certificate-card"
                 onClick={() => openModal(cert)}
               >
-                <img src={cert.src} alt={cert.title} className="cert-thumbnail" />
+                {cert.type === "link" ? (
+                  <div className="cert-link-placeholder">
+                    <FaCertificate className="cert-link-icon" />
+                    <span className="cert-badge">
+                      Verify Credential <FaExternalLinkAlt className="inline-link-icon" />
+                    </span>
+                  </div>
+                ) : (
+                  <img src={cert.src} alt={cert.title} className="cert-thumbnail" />
+                )}
                 <p className="cert-description">{cert.title}</p>
               </div>
             </TiltCard>

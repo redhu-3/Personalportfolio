@@ -12,7 +12,7 @@ const ProjectSection = () => {
       description:
         "A MERN stack platform for reporting civic issues. Users can submit complaints with images and location details. Admins can monitor and resolve reports through a live dashboard.",
       tech: "MongoDB | Express.js | React.js | Node.js",
-      link: null, // ongoing project
+      link: "https://github.com/redhu-3/cleantrack",
     },
     {
       title: "AI Powered Travel Planner",
@@ -20,7 +20,7 @@ const ProjectSection = () => {
       description:
         "An interactive, AI-driven itinerary planner that designs optimized routes, recommends local hotspots, and constructs trip budgets based on user preferences.",
       tech: "React.js | Node.js | OpenAI API | Tailwind CSS",
-      link: null, // ongoing project
+      link: "https://github.com/redhu-3/AI-POWERED-TRAVEL-PLANNER",
     },
     {
       title: "URL Shortener",
@@ -34,7 +34,7 @@ const ProjectSection = () => {
       title: "Smart Study Planner",
       date: "Apr 2025 – May 2025",
       description:
-        "An intelligent dashboard helping students schedule study sessions, set goals, track task progress, and optimize daily study routines using visual calendar analytics.",
+        "A console-based Java application helping students schedule study sessions, set goals, track task progress, and optimize daily study routines via an interactive command-line interface.",
       tech: "Java | JDBC | MySQL",
       link: "https://github.com/redhu-3/SmartStudyPlanner",
     },
