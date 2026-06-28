@@ -1,26 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import "./HeroSection.css";
-import { FaMoon, FaSun, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const HeroSection = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleTheme = () => {
-    setDarkMode(!darkMode);
-  };
-
   useEffect(() => {
-    // dark-mode is Option A ("Aurora"), light-mode is Option C ("Cyber Mint")
-    document.body.className = darkMode ? "dark-mode" : "light-mode";
-  }, [darkMode]);
+    // Keep it dark-mode (Aurora theme) permanently as requested
+    document.body.className = "dark-mode";
+  }, []);
 
   const handleDownloadResume = () => {
-    const link = document.createElement("a");
-    link.href =
-      "https://drive.google.com/uc?export=download&id=1N8lFfANbrSBfFTdV-L2mE0BRE7Syzw_6";
-    link.download = "Redhu-Darsini-G-resume.pdf";
-    link.click();
+    window.open("https://drive.google.com/file/d/1LjRKDQfLMIY8TAcRXKKzW_iDccR-DrMw/view?usp=sharing", "_blank");
   };
 
   const handleScrollToContact = () => {
@@ -55,35 +45,33 @@ const HeroSection = () => {
     },
   };
 
-  const nameVariants = {
-    hidden: { opacity: 0, y: -40, scale: 0.95 },
+  const nameContainerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.04,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const charVariants = {
+    hidden: { opacity: 0, y: 30, scale: 0.8 },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
         type: "spring",
-        stiffness: 70,
-        damping: 14,
+        stiffness: 100,
+        damping: 10,
       },
     },
   };
 
   return (
     <div className="b2">
-      {/* 🌗 Theme Toggle */}
-      <motion.div 
-        className="theme-toggle" 
-        onClick={toggleTheme}
-        whileHover={{ scale: 1.15, rotate: 15 }}
-        whileTap={{ scale: 0.85 }}
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1 }}
-      >
-        {darkMode ? <FaSun /> : <FaMoon />}
-      </motion.div>
-
       <motion.div 
         className="per_info"
         variants={containerVariants}
@@ -92,21 +80,26 @@ const HeroSection = () => {
       >
         <motion.h1 
           className="name"
-          variants={nameVariants}
+          variants={nameContainerVariants}
         >
-          <span>Hi I'm </span>REDHU DARSINI G
+          <motion.span
+            style={{ display: "block" }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            Hi I'm 
+          </motion.span>
+          {"REDHU DARSINI G".split("").map((char, index) => (
+            <motion.span
+              key={index}
+              variants={charVariants}
+              style={{ display: "inline-block", whiteSpace: char === " " ? "pre" : "normal" }}
+            >
+              {char}
+            </motion.span>
+          ))}
         </motion.h1>
-
-        <motion.div 
-          className="ab-me"
-          variants={fadeUpVariants}
-        >
-          <h2 className="me">
-            Passionate IT student skilled in MERN stack, C, and Java.
-            <br />
-            Dedicated to building impactful, user-focused web solutions.
-          </h2>
-        </motion.div>
 
         {/* ✅ Buttons */}
         <motion.div 

@@ -8,6 +8,7 @@ import ProjectSection from "./component/ProjectsSection";
 import ContactSection from "./component/ContactSection";
 import BackgroundMesh from "./component/BackgroundMesh";
 import CustomCursor from "./component/CustomCursor";
+import Marquee from "./component/Marquee";
 
 import "./App.css";
 
@@ -22,6 +23,9 @@ const App = () => {
       <section id="home">
         <HeroSection />
       </section>
+
+      {/* Transitional text marquee */}
+      <Marquee />
 
       {/* ✅ About Section */}
       <section id="about">
