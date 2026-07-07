@@ -4,7 +4,8 @@ import './SkillsSection.css';
 import { FaCode, FaDatabase, FaTools, FaLaptopCode, FaJava } from 'react-icons/fa';
 import {
   SiMongodb, SiFirebase, SiReact, SiNodedotjs,
-  SiExpress, SiJavascript, SiHtml5, SiCss3, SiBootstrap, SiC
+  SiExpress, SiJavascript, SiHtml5, SiCss3, SiBootstrap, SiC,
+  SiMysql
 } from 'react-icons/si';
 import ScrollReveal from './ScrollReveal';
 
@@ -42,6 +43,7 @@ const SkillsSection = () => {
       icon: <FaDatabase className="skill-icon" />,
       skills: [
         { name: "MongoDB", icon: <SiMongodb /> },
+        { name: "MySQL", icon: <SiMysql /> },
         { name: "Firebase", icon: <SiFirebase /> },
         { name: "Git / GitHub", icon: <FaTools /> },
         { name: "VS Code", icon: <FaLaptopCode /> }

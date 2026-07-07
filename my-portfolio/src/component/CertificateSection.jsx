@@ -4,6 +4,7 @@ import reactCert from "../assets/react.png";
 import jsCert from "../assets/javascript.png";
 import fullstackCert from "../assets/fullstack.png";
 import nptelCert from "../assets/nptel.png";
+import mernGenaiCert from "../assets/mern_genai.png";
 import "./CertificateSection.css";
 import TiltCard from "./TiltCard";
 import ScrollReveal from "./ScrollReveal";
@@ -14,30 +15,37 @@ Modal.setAppElement("#root");
 const certificates = [
   {
     id: 1,
+    title: "Full Stack Web Development With MERN STACK & GenAI 2026 – Udemy",
+    type: "image",
+    src: mernGenaiCert,
+    link: "https://drive.google.com/file/d/1kryT-SJQC5W4uRNYWBA-P9c_F8Gz8LST/view?usp=sharing",
+  },
+  {
+    id: 2,
     title: "Hands-on React.js From Beginner to Expert",
     type: "image",
     src: reactCert,
   },
   {
-    id: 2,
+    id: 3,
     title: "JavaScript Programming – Infosys Springboard",
     type: "image",
     src: jsCert,
   },
   {
-    id: 3,
+    id: 4,
     title: "Full Stack Development Masterclass – NoviTech R&D Private Limited",
     type: "image",
     src: fullstackCert,
   },
   {
-    id: 4,
+    id: 5,
     title: "Introduction to Industry 4.0 and Industrial Internet of Things – NPTEL",
     type: "image",
     src: nptelCert,
   },
   {
-    id: 5,
+    id: 6,
     title: "Web Designing Workshop",
     type: "link",
     link: "https://drive.google.com/file/d/1uoBFHE1N-Xq8-e4K7OIvOQkM3e1s6VMC/view?usp=sharing",
@@ -114,6 +122,16 @@ const CertificateSection = () => {
           <p className="cert-modal-title">
             {currentCert.title}
           </p>
+        )}
+        {currentCert && currentCert.link && (
+          <a
+            href={currentCert.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cert-verify-btn"
+          >
+            Verify Credential <FaExternalLinkAlt size={12} style={{ marginLeft: "6px" }} />
+          </a>
         )}
       </Modal>
     </div>

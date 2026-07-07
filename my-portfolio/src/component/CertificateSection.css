@@ -249,6 +249,29 @@
   text-align: center;
 }
 
+.cert-verify-btn {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #090314;
+  background: linear-gradient(90deg, var(--color-accent-cyan), var(--color-accent-magenta));
+  padding: 10px 24px;
+  border-radius: 50px;
+  box-shadow: var(--glow-cyan);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cert-verify-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-magenta);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .certificate-section {
