@@ -5,6 +5,7 @@ import jsCert from "../assets/javascript.png";
 import fullstackCert from "../assets/fullstack.png";
 import nptelCert from "../assets/nptel.png";
 import mernGenaiCert from "../assets/mern_genai.png";
+import workshopCert from "../assets/web_design_workshop.png";
 import "./CertificateSection.css";
 import TiltCard from "./TiltCard";
 import ScrollReveal from "./ScrollReveal";
@@ -47,7 +48,8 @@ const certificates = [
   {
     id: 6,
     title: "Web Designing Workshop",
-    type: "link",
+    type: "image",
+    src: workshopCert,
     link: "https://drive.google.com/file/d/1uoBFHE1N-Xq8-e4K7OIvOQkM3e1s6VMC/view?usp=sharing",
   },
 ];

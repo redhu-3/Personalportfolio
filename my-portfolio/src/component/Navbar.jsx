@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Navbar.css";
-import { FaHome, FaUser, FaCode, FaProjectDiagram, FaEnvelope } from "react-icons/fa";
+import { FaHome, FaUser, FaCode, FaProjectDiagram, FaEnvelope, FaCertificate } from "react-icons/fa";
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -42,6 +42,7 @@ const Navbar = () => {
     { id: "home", label: "Home", icon: <FaHome /> },
     { id: "about", label: "About", icon: <FaUser /> },
     { id: "skills", label: "Skills", icon: <FaCode /> },
+    { id: "certificates", label: "Certifications", icon: <FaCertificate /> },
     { id: "projects", label: "Projects", icon: <FaProjectDiagram /> },
     { id: "contact", label: "Contact", icon: <FaEnvelope /> },
   ];
