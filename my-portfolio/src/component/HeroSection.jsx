@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import "./HeroSection.css";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const HeroSection = () => {
   useEffect(() => {
@@ -141,6 +142,15 @@ const HeroSection = () => {
             whileHover={{ y: -5, scale: 1.15, color: "var(--color-accent-cyan)" }}
           >
             <FaGithub size={28} />
+          </motion.a>
+          <motion.a
+            href="https://leetcode.com/u/__redhu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LeetCode"
+            whileHover={{ y: -5, scale: 1.15, color: "#FFA116" }}
+          >
+            <SiLeetcode size={28} />
           </motion.a>
           <motion.a
             href="https://www.linkedin.com/in/redhu-darsini-7385aa296/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
